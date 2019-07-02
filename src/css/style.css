@@ -1,0 +1,523 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  font-family: '幼圆';
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.topBox {
+  width: 100%;
+  height: 50px;
+  display: flex;
+}
+
+.topBox .imgBox {
+  flex: 3;
+}
+
+.topBox .imgBox img {
+  width: 90%;
+  height: 90%;
+  padding: 5%;
+}
+
+.topBox .right {
+  flex: 7;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 5%;
+}
+
+.topBox .right p {
+  width: 110px;
+  height: 30px;
+  background: #F2F2F2;
+  font-weight: 600;
+  border-radius: 10px;
+  display: flex;
+  font-size: 13px;
+}
+
+.topBox .right p a {
+  flex: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #F01414;
+}
+
+main {
+  flex: 1;
+  overflow: hidden;
+}
+
+main nav {
+  width: 100%;
+  height: 3rem;
+  display: flex;
+}
+
+main nav a {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #71777D;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+main nav a.active {
+  color: #F01414;
+}
+
+.homeBox {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.homeBox .con {
+  width: 100%;
+}
+
+.homeBox .con h3 {
+  width: 100%;
+  height: 3.5rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 5%;
+  font-weight: 200;
+}
+
+.swiperBox {
+  width: 96%;
+  height: 110px;
+  border-radius: 8px;
+}
+
+.swiperBox .swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.swiperBox .swiper-container .swiper-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiperBox .swiper-container .swiper-wrapper .swiper-slide {
+  width: 100%;
+  height: 100%;
+  padding: 0 2%;
+}
+
+.swiperBox .swiper-container .swiper-wrapper .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+}
+
+.keBox {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.keBox .slideBox {
+  width: 110px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #ccc;
+}
+
+.keBox .slideBox a {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  color: #71777D;
+  font-size: 14px;
+}
+
+.keBox .slideBox a.active {
+  color: #F01414;
+}
+
+.keBox .rightBox {
+  flex: 1;
+  overflow: auto;
+}
+
+dl {
+  display: flex;
+  width: 92%;
+  height: 100px;
+  margin: 0 4%;
+}
+
+dl dt {
+  flex: 3;
+}
+
+dl dd {
+  flex: 7;
+  display: flex;
+  flex-direction: column;
+}
+
+dl dd p {
+  width: 100%;
+  font-size: 16px;
+  height: 1.5rem;
+  padding-left: 5%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 14px;
+}
+
+.content {
+  width: 100%;
+  height: calc(100% - 48px);
+  overflow: hidden;
+  position: relative;
+}
+
+.content .big {
+  width: 100%;
+  padding-top: 5%;
+}
+
+.content .loading {
+  width: 100%;
+  height: 3rem;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  z-index: 999999;
+}
+
+.content .loading img {
+  width: 100%;
+  height: 100%;
+}
+
+.content .loading.active {
+  border: 1px solid red;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.loginBox, .registerBox {
+  width: 100%;
+  height: 100%;
+}
+
+.loginBox h2, .registerBox h2 {
+  width: 100%;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  color: #F01414;
+  font-weight: 200;
+}
+
+.loginBox p, .registerBox p {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginBox p input, .registerBox p input {
+  width: 94%;
+  height: 80%;
+  outline: none;
+  padding-left: 5%;
+  border: none;
+  border-bottom: 1px solid #ccc;
+}
+
+.loginBox span, .registerBox span {
+  color: red;
+  margin-left: 25px;
+}
+
+.loginBox b, .registerBox b {
+  width: 100%;
+  height: 60px;
+  display: block;
+  margin-top: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginBox b button, .registerBox b button {
+  width: 90%;
+  height: 80%;
+  background: #F01414;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  outline: none;
+  border: 0;
+}
+
+.loginBox i, .registerBox i {
+  position: absolute;
+  right: 25px;
+}
+
+.editBox {
+  width: 100%;
+  height: 100%;
+}
+
+.editBox h2 {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.editBox p {
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.editBox p b {
+  color: red;
+  font-size: 26px;
+}
+
+.editBox button {
+  outline: none;
+  background: #F01414;
+  color: #F2F2F2;
+  padding: 4%;
+  margin-top: 10%;
+  margin-left: 60%;
+  border-radius: 10px;
+  border: 0;
+}
+
+.shopBox {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.shopBox h2 {
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 26px;
+  color: #F01414;
+  position: relative;
+}
+
+.shopBox h2 b {
+  font-size: 16px;
+  font-weight: 200;
+  position: absolute;
+  left: 5%;
+  color: blue;
+}
+
+.shopBox .wrap {
+  flex: 1;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.shopBox .wrap .con {
+  width: 96%;
+  height: 100px;
+  margin: 2%;
+  border-radius: 10px;
+  background: palegreen;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.shopBox .wrap .con > input {
+  position: absolute;
+  top: 35%;
+  left: 3%;
+  width: 20px;
+  height: 20px;
+}
+
+.shopBox .wrap .con p {
+  width: 100%;
+  height: 30px;
+  padding-left: 13%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.shopBox .wrap .con p span {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #ccc;
+  background: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.shopBox .wrap .con p i {
+  margin: 0 3%;
+}
+
+.shopBox .wrap .con b {
+  color: red;
+}
+
+.shopBox .wrap > b {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.shopBox .wrap > b a {
+  color: blue;
+}
+
+.shopBox .wrap ul {
+  width: 100%;
+  height: 3rem;
+  background: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+}
+
+.shopBox .wrap ul li {
+  flex: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.shopBox .wrap ul li input {
+  width: 20px;
+  height: 20px;
+}
+
+.searchBox {
+  width: 100%;
+  height: 100%;
+}
+
+.searchBox h2 {
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 26px;
+  color: #F01414;
+}
+
+.searchBox p {
+  width: 100%;
+  height: 2.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.searchBox p input {
+  width: 80%;
+  height: 90%;
+  margin: 2%;
+  outline: none;
+  padding-left: 3%;
+}
+
+.searchBox p button {
+  width: 50px;
+  height: 30px;
+  outline: none;
+  background: #F01414;
+  border: none;
+  border-radius: 10px;
+  color: #F2F2F2;
+}
+
+.searchBox ul {
+  width: 100%;
+  margin-top: 6%;
+}
+
+.searchBox ul b {
+  width: 100%;
+  height: 2rem;
+  line-height: 2rem;
+  padding-left: 3%;
+  font-weight: 200;
+  display: block;
+  color: purple;
+}
+
+.searchBox ul li {
+  display: inline-block;
+  padding: 2%;
+  border: 1px solid #ccc;
+  margin: 1%;
+  font-size: 13px;
+}
+
+.searchBox ul li span {
+  color: #F01414;
+}
